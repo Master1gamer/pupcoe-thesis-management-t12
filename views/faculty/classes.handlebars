@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">My Classes</h1>
+</div>
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100">
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">ID</th>
+              <th class="column2">Batch</th>
+              <th class="column3">Section</th>
+              <th class="column5"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each classes}}
+            <tr>
+              <th class="column1" scope="row">{{this.id}}</th>
+              <td class="column2">{{this.batch}}</td>
+              <td class="column3">{{this.section}}</td>
+              <td class="column5"><a href='/faculty/class/{{this.id}}'><center>Class Details</center></a></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

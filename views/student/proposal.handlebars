@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Submitted Proposal</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group mr-2">
+      <a href="/student/proposal-create" class="btn btn-sm btn-outline-secondary">Submit Proposal</a>
+    </div>
+    <div class="btn-group mr-2">
+      <a href="/student/proposal-status" class="btn btn-sm btn-outline-secondary">Proposal Status</a>
+    </div>
+  </div>
+</div>
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100">
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">ID</th>
+              <th class="column2">THESIS TITLE</th>
+              <th class="column3">TIMESTAMP</th>
+              <th class="column4"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each proposal}}
+            <tr>
+              <th class="column1" scope="row">{{this.proposal_id}}</th>
+              <td class="column2">{{this.title}}</td>
+              <td class="column3">{{this.timestamp}}</td>
+              <td class="column4"><a href='/student/proposal/{{this.id}}'><center>Thesis Details</center></a></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

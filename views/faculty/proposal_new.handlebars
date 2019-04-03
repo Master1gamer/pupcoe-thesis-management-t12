@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">New Proposal</h1>
+</div>
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100">
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">ID</th>
+              <th class="column2">THESIS TITLE</th>
+              <th class="column3">TIMESTAMP</th>
+              <th class="column4">APPROVED</th>
+              <th class="column5"><center>DISAPPROVED</center></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each proposal}}
+            <tr>
+              <th class="column1" scope="row">{{this.proposal_id}}</th>
+              <td class="column2">{{this.title}}</td>
+              <td class="column3">{{this.timestamp}}</td>
+              <td class="column4"><a href="/api/proposal/{{this.proposal_id}}"><button type="button" class="btn btn-primary">Approved</button></a></td>
+              <td class="column5"><a href="/api/proposal/{{this.proposal_id}}"><center><button type="button" class="btn btn-primary">Disapproved</button></center></a></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

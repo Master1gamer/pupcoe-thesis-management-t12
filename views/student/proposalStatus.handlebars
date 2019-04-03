@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Submitted Proposal</h1>
+</div>
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100">
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">ID</th>
+              <th class="column2">THESIS TITLE</th>
+              <th class="column3">TIMESTAMP</th>
+              <th class="column4"><center>APPROVED COUNT</center></th>
+              <th class="column5"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each approved}}
+            <tr>
+              <th class="column1" scope="row">{{this.proposal_id}}</th>
+              <td class="column2">{{this.title}}</td>
+              <td class="column3">{{this.timestamp}}</td>
+              <td class="column4"><center>{{this.count}}</center></td>
+              <td><a href='/student/proposal/{{this.id}}'>Thesis Details</a></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

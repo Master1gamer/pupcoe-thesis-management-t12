@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">{{user.first_name}} {{user.last_name}}</h1>
+</div>
+<div>
+  <h2 class='h3'></h2>
+  <h2 class='h4'>Class: {{user.batch}}-{{user.section}}</h2>
+  <h2 class='h4'>Group: {{group.name}}</h2>
+  <h2 class='h4'>Adiviser: {{user.adviser_fname}} {{user.adviser_lname}}</h2>
+  <hr>
+ <h4 class="h4">Group Members</h4><br>
+ <div class="limiter">
+  <div class="container-table100" style="padding-top: 0px;">
+    <div class="wrap-table100">
+      <div class="table100">
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">Student Number</th>
+              <th class="column2">Name</th>
+              <th class="column3">Email</th>
+              <th class="column4">Phone</th>
+              <th class="column5"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each members}}
+            <tr>
+              <th class="column1" scope="row">{{this.student_number}}</th>
+              <td class="column2">{{this.first_name}} {{this.last_name}}</td>
+              <td class="column3">{{this.email}}</td>
+              <td class="column4">{{this.phone}}</td>
+              <td class="column5"><a href='/tudent/{{this.id}}'><center>Student Details</center></a></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
