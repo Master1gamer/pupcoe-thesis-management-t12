@@ -1,10 +1,10 @@
 const config = {
   development: {
     db: {
-      database: 'd3rqakkbeqjvlh',
-      user: 'mcqfiyjhkmlijc',
-      password: '63892f5253085e21053ac9322b99122a97181258aa8149734586bd522e39354c',
-      host: 'ec2-50-17-246-114.compute-1.amazonaws.com',
+      database: 'd6qidmqffp0pd',
+      user: 'ehvohapjwvjnjn',
+      password: 'a6361456ac7202d9889bfc44c3b5099d615e1465f1e91c05ac85549b37411321',
+      host: 'ec2-54-221-225-11.compute-1.amazonaws.com',
       port: 5432,
      ssl: true
     },
